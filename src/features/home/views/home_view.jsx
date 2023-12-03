@@ -55,7 +55,7 @@ const HomeView = () => {
           border: "2px solid",
           display: "flex",
           margin: "auto",
-          margintop: "20px",
+          marginTop: "30px",
           }}
           onClick={logout}>Cerrar Sesión
       </AppButton>
