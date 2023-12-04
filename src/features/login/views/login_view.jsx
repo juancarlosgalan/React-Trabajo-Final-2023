@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../../../features/auth/hook/use_auth";
 import AppButton from "../../../core/components/app_button/app_button";
+import AppCard from "../../../core/components/app_card/provider/app_card";
 
 const LoginView = () => {
   const { login } = useAuth();
@@ -30,20 +31,25 @@ const LoginView = () => {
 
   return (
     <div>
+      <AppCard
+        backgroundImageSrc={"https://fastly.picsum.photos/id/563/3872/2592.jpg?hmac=0IrQ3rYsIWh7eNXUWlmVPJCOZt1V2vgenFWm6a-2Pz0"}>
       <h1
         style={{
-          justifyContent: "center",
+          backgroundColor: "transparent",
+          color: "white",
+          borderRadius: "5px",
+          padding: "10px",
+          
           display: "flex",
           margin: "auto",
-          marginBottom: "10px",
-          padding: "20px",
-          color: "red",
+          marginBottom: "20px",
+          opacity: "0.7",
         }}>React Films</h1>
 
       <form onSubmit={handleSubmit}>
         <input type="email" name="email" placeholder="Email"
            style={{
-              backgroundColor: "white",
+              backgroundColor: "transparent",
               color: "black",
               borderRadius: "5px",
               padding: "10px",
@@ -55,8 +61,8 @@ const LoginView = () => {
          />
         <input type="password" name="password" placeholder= "Password"
             style={{
-              backgroundColor: "black",
-              color: "white",
+              backgroundColor: "transparent",
+              color: "black",
               borderRadius: "5px",
               padding: "10px",
               border: "2px solid",
@@ -68,20 +74,25 @@ const LoginView = () => {
 
         <AppButton type="submit"
           style={{
-            backgroundColor: "black",
+            backgroundColor: "transparent",
             color: "white",
             borderRadius: "5px",
             padding: "10px",
             border: "2px solid",
             display: "flex",
             margin: "auto",
+            cursor: "pointer",
             }}
         >
           Iniciar Sesión
           </AppButton>
+         
         <p>{error}</p>
       </form>
-    </div>
+      </AppCard>
+      
+      </div>
+    
   );
 };
 

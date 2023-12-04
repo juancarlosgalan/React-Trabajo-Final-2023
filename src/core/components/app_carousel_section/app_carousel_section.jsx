@@ -14,23 +14,35 @@ const AppCarouselSection = ({ title, data }) => {
       <AppSwiper>
         {data?.map((e) => (
           <AppSwiperSlide key={e.id}>
+            <div>
+            <h3
+                style={{
+                  height: "50px",
+                  width: "250px",
+                  position: "relative",
+                  color: "white",
+                  textSizeAdjust: "auto",
+               
+                
+                  
+                }}>{e.title}</h3>
+
+
+
+            </div>
             <div
               style={{
                 height: "150px",
                 width: "250px",
                 backgroundImage: `url(${e.backdrop})`,
-                backgroundSize: "contain",
+                backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 borderRadius: "10px",
                 borderStyle: "solid",
               }}
               >
-                <h3
-                style={{
-                  position: "center",
-                  color: "greenyellow",
-                }}>{e.title}</h3>
+               
               </div>
           </AppSwiperSlide>
         ))}

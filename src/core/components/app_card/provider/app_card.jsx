@@ -7,10 +7,10 @@ import useHover from "../../../hooks/useHover";
 
 const AppCard = ({ 
   children, 
-  width = "300px",
-  height = "150px", 
+  width = "100%",
+  height = "100%",
   backgroundImageSrc = undefined,
-  aspectRatio = undefined,
+  aspectRatio = "5/2",
   borderColor = "1px solid #ccc",
   borderRadius = "10px",
   ...props 
